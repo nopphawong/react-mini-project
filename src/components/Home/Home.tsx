@@ -4,7 +4,6 @@ import { APIKey } from '../../api/MovieApiKey'
 import { useDispatch } from 'react-redux'
 import { addMovie } from '../../store/slices/movieSlice'
 import './Home.scss'
-import { SearchMovieData } from '../../models/movie.model'
 
 // Components
 import MovieList from '../MovieList/MovieList'
@@ -23,7 +22,7 @@ const Home = ({}: Props) => {
       )
 
       setTimeout(() => {
-        dispatch(addMovie(movies.Search as SearchMovieData[]))
+        dispatch(addMovie(movies.Search))
       }, 500)
     } catch (error) {
       console.log(error)
