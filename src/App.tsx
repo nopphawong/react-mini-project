@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import { Provider } from 'react-redux'
-import store from './store/store'
+import { store } from './store/store'
 
 // Components
 import Header from './components/Header/Header'

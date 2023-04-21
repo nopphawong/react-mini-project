@@ -3,10 +3,11 @@ import { useSelector } from 'react-redux'
 import './MovieList.scss'
 import { SearchMovieType } from '../../models/movie.model'
 import MovieCard from '../MovieCard/MovieCard'
+import { RootState } from '../../store/store'
 
 type Props = {}
 function MovieList({}: Props) {
-  const { movies } = useSelector((state: SearchMovieType) => state)
+  const { movies } = useSelector((state: RootState) => state.movies)
 
   return (
     <div className='movie-container'>
